@@ -1,6 +1,9 @@
 # STM9-Plugin
-The latest PCC semi-auto mod for Receiver 2!
+The latest PCC semi-auto mod for Receiver 2!<br>
 
+Also check out: [MagLoaderThing](https://github.com/CiarenceW/MagLoaderThing), this un-cuts a thing in the Compound that makes reloading big magazines less of a chore
+
+<image align="center" src="imagesandstuff/main.png">
 
 ## DISCLAIMER
 If you run into an issue, create an issue in the Issues tab on GitHub, with a screenshot of your problem and your player.log file, located in your  %UserProfile%\AppData\LocalLow\Wolfire Games\Receiver2\ folder or equivalent for your OS.
