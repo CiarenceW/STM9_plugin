@@ -23,7 +23,7 @@ If you run into an issue, create an issue in the Issues tab on GitHub, with a sc
  - Go to the debug menu, and start the custom campaign, or go to the debug menu and spawn the gun + mag in.<br>
  - The vanilla Glock magazines are also compatible with this gun, and vice versa (yup, 33 rounder full auto glock)<br>
  - No you can't get the big ones in the dreaming, blame Wolfire or the current geopolitical state of the world or whatever<br>
- - The sights are zeroed for 40ish meters, a little less that half a football field.
+ - The sights are zeroed for 40ish meters, a little less than half a football field.
 ## Credits
  Szikaka for all their continued assistance, and also for the new version of the modding kit </br>
  Wolfire for this masterpiece of a game (akm when?)</br>
