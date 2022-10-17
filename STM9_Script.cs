@@ -73,16 +73,26 @@ namespace STM9_plugin
                 trigger.UpdateDisplay();
             }
 
-            if (trigger.amount == 0) _disconnector_needs_reset = false; // Release the disconnector when the trigger is released
-
             if (hammer.amount == 0 && _hammer_state == 2)
             { // If hammer dropped and hammer was cocked then fire gun and decock hammer
                 TryFireBullet(1, FireBullet);
 
                 _hammer_state = 0;
+
+                _disconnector_needs_reset = true;
             }
 
-            if (slide.amount == 0 && _hammer_state == 3)
+            if (trigger.amount == 0)
+            {
+                _disconnector_needs_reset = false;
+            }
+
+            if (slide_stop.amount == 1)
+            {
+                slide_stop.asleep = true;
+            }
+
+            if (slide.amount == 0 && _hammer_state == 3 && _disconnector_needs_reset == false)
             { // Simulate auto sear
                 hammer.amount = Mathf.MoveTowards(hammer.amount, _hammer_cocked_val, Time.deltaTime * Time.timeScale * 50);
                 if (hammer.amount == _hammer_cocked_val) _hammer_state = 2;
