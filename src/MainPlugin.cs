@@ -6,7 +6,7 @@ using BepInEx;
 namespace STM9_plugin
 {
     [BepInDependency("pl.szikaka.receiver_2_modding_kit")]
-    [BepInPlugin("Ciarencew.STM9", "STM9 Plugin", "1.0.0")]
+    [BepInPlugin("Ciarencew.STM9", "STM9 Plugin", "2.0.0")]
     internal class MainPlugin : BaseUnityPlugin
     {
         public static MainPlugin instance

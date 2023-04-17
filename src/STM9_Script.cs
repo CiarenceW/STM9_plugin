@@ -13,6 +13,11 @@ namespace STM9_plugin
         private float hammer_accel = -5000;
         private float m_charging_handle_amount;
         private ModHelpEntry help_entry;
+        private string[] new_magazine_root_types =
+        {
+            "glock_17",
+            "stm9_mag"
+        };
         public Sprite help_entry_sprite;
         private readonly float[] slide_push_hammer_curve = new float[] {
             0,
@@ -47,7 +52,13 @@ namespace STM9_plugin
         }
         public override void InitializeGun()
         {
-            pooled_muzzle_flash = ((GunScript)ReceiverCoreScript.Instance().generic_prefabs.First(it => { return it is GunScript && ((GunScript)it).gun_model == GunModel.Glock; })).pooled_muzzle_flash;
+            var RCS = ReceiverCoreScript.Instance();
+            pooled_muzzle_flash = ((GunScript)RCS.generic_prefabs.First(it => { return it is GunScript && ((GunScript)it).gun_model == GunModel.Glock; })).pooled_muzzle_flash;
+            ((GunScript)RCS.generic_prefabs.First(it => { return it is GunScript && ((GunScript)it).gun_model == GunModel.Glock; })).magazine_root_types = new_magazine_root_types;
+            RCS.TryGetMagazinePrefabFromRoot("stm9_mag", MagazineClass.LowCapacity, out var magLow);
+            RCS.TryGetMagazinePrefabFromRoot("stm9_mag", MagazineClass.StandardCapacity, out var magStd);
+            magLow.glint_renderer.material = RCS.GetMagazinePrefab("wolfire.glock_17", MagazineClass.StandardCapacity).glint_renderer.material;
+            magStd.glint_renderer.material = RCS.GetMagazinePrefab("wolfire.glock_17", MagazineClass.StandardCapacity).glint_renderer.material;
             //loaded_cartridge_prefab = ((GunScript)ReceiverCoreScript.Instance().generic_prefabs.First(it => { return it is GunScript && ((GunScript)it).gun_model == GunModel.Glock; })).loaded_cartridge_prefab;
         }
         public override void AwakeGun()
@@ -56,6 +67,7 @@ namespace STM9_plugin
         }
         public override void UpdateGun()
         {
+            LocalAimHandler lah = LocalAimHandler.player_instance;
             hammer.asleep = true;
             hammer.accel = hammer_accel;
 
