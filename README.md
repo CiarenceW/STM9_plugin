@@ -1,7 +1,8 @@
 # STM9-Plugin
 The latest PCC semi-auto mod for Receiver 2!<br>
 
-Also check out: [MagLoaderThing](https://github.com/CiarenceW/MagLoaderThing), this un-cuts a thing in the Compound that makes reloading big magazines less of a chore
+Also check out: [MagLoaderThing](https://github.com/CiarenceW/MagLoaderThing), this un-cuts a thing in the Compound that makes reloading big magazines less of a chore  
+And [this](https://github.com/CiarenceW/r2_CustomCompoundAmmoBoxes) as well, it adds ammo boxes for modded cartridges in the Compound, with possibilities of adding custom models for them too!
 
 <image align="center" src="imagesandstuff/main.png">
 
@@ -23,9 +24,9 @@ If you run into an issue, create an issue in the Issues tab on GitHub, with a sc
  - Go to the debug menu, and start the custom campaign, or go to the debug menu and spawn the gun + mag in.<br>
  - The vanilla Glock magazines are also compatible with this gun, and vice versa (yup, 33 rounder full auto glock)<br>
  - No you can't get the big ones in the dreaming, blame Wolfire or the current geopolitical state of the world or whatever<br>
- - The sights are zeroed for 40ish meters, a little less than half a football field.
+ - The sights aren't zeroed. you can't aim, don't even try, or I'll know!
 ## Credits
- Szikaka for all their continued assistance, and also for the new version of the modding kit </br>
+ Szikaka for all _**HIS**_ continued assistance, and also for the new version of the modding kit </br>
  Wolfire for this masterpiece of a game (akm when?)</br>
  me (Ciarence#6364) </br>
  BSG for the sounds, models, and textures</br>
